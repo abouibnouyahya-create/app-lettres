@@ -24,3 +24,75 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animation de rebond pour les boutons Duolingo */
+@keyframes bounce-click {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-click:active {
+  animation: bounce-click 0.2s ease-in-out;
+}
+
+/* Animation d'apparition fluide */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* L'effet 3D des boutons Duolingo */
+.btn-3d {
+  transition: all 0.1s ease;
+  transform: translateY(0);
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 0 transparent !important;
+}
+
+/* Animation d'apparition pour le contenu des étapes */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-step {
+  animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
